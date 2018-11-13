@@ -9,6 +9,6 @@ test.txt
 /extend/__pycache__
 /basic/migrations
 /basic/__pycache__
-/basic/views.py.bak
+# /basic/views.py.bak
 /basic/templatetags/__pycache__
 /__pycache__
