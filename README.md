@@ -4,7 +4,7 @@ This is an open source python/django project for image recognition using caffe f
 
 For SQL commands, you can use the MySQL statements provided (/sae/readme/database.sql) or use Django commands (python ./manage.py makemigrations and then python ./manage.py migrate). If you use Django commands, do not forget to insert 1000 records into Table basic_synsetwords, check the /sae/readme/database.sql file.
 
-For secret key files, please check the /sae/readme/*.example files. However, if you are not using Sina Cloud Server, you may need to change all of these files according to your server environment.
+For secret key files, please check the /sae/readme/*.example files. However, if you are not using Sina SAE and SCS Cloud Servers, you may need to change all of these files according to your server environment. The sae/settings.py file should also be changed in serveral places, such as os.environ.get('MYSQL_PORT'). These are environment variables provided by Sina SAE dockers.
 
 For internationalization, you can use Django commands (python ./manage.py makemessages -l zh_Hans and then python ./manage.py compilemessages). If you added any new words for translation, before running the compilemessages command, you may want to check the path-to-your-project/common_files/locale/zh_Hans/LC_MESSAGES/django.po file
 
