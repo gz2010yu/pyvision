@@ -2,7 +2,6 @@ test.txt
 /sae01
 /register/migrations
 /register/__pycache__
-/media/*
 /index/migrations
 /index/__pycache__
 /home/migrations
