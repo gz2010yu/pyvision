@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE|default:'en-us' }}" >
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="{% static 'css/mui.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<title>{{page_title}} | {% trans "photo pocket" %}</title>
+		{% block extrahead %}{% endblock %}
+		{% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE">{% endblock %}
+		<link rel="stylesheet" href="{% static 'css/title.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/error.css' %}" />
+		<link rel="icon" href="{% static 'images/icon.ico' %}" />
+		<script type="text/javascript" src="{% static 'js/mui.min.js' %}" ></script>
+		<script type="text/javascript" >
+			mui.init({
+				swipeBack:true, //启用右滑关闭功能
+				statusBarBackground: '#f7f7f7'
+			});
+			mui.plusReady(function() {
+				//这里开始写需要APP运行的代码
+				plus.screen.lockOrientation("portrait-primary");
+				// close splash
+				setTimeout(function() {
+					//关闭 splash
+					plus.navigator.closeSplashscreen();
+				}, 600);
+				
+				// 在APP内按回退键2次
+				var backButtonPress = 0;
+				$.back = function(event) {
+					backButtonPress++;
+					if (backButtonPress > 1) {
+						plus.runtime.quit();
+					} else {
+						plus.nativeUI.toast( '{% trans "press again for quitting the app" %}' );
+						// '再按一次退出应用'
+					}
+					setTimeout(function() {
+						backButtonPress = 0;
+					}, 1000);
+					return false;
+				};
+			});
+		</script>
+	</head>
+	{% load i18n %}
+	{% load static %}
+	<body>
+		{% block content %}{% endblock %}
+	</body>
+</html>

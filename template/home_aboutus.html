@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block content %}
+<header class="mui-bar mui-bar-nav">
+	<a class="mui-icon mui-icon-left-nav mui-pull-left" href="{% url 'home-settings' %}" ></a>
+	<h1 class="mui-title">{{page_title}} | {% trans "photo pocket" %}</h1>
+</header>
+<div style="margin-top: 75px;"></div>
+{% for oneline in contents %}
+<div class="title">{{oneline}}</div>
+{% endfor %}
+{% endblock %}

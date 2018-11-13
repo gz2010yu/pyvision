@@ -1,0 +1,11 @@
+.customized-error-class{
+	color: red;
+	font-size: 25px;
+}
+.errorlist{
+	list-style:none;
+}
+.errorlist li{
+	list-style:none;
+}
+

@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n static %}
+{% load basic_extras %}
+
+{% block content %}
+<header class="mui-bar mui-bar-nav">
+	<a class="mui-icon mui-icon-left-nav mui-pull-left" href="{% url 'index' %}" ></a>
+	<h1 class="mui-title">{{page_title}} | {% trans "photo pocket" %}</h1>
+</header>
+<div class="mui-content">
+	<form action="" method="post" id='login-form' class="mui-input-group" target="_self" onsubmit="return checkform()" >
+		{% csrf_token %}
+		<div class="mui-input-row">
+			{{ form.username.errors }}
+			<label class="required" for="account">{% trans "username" %}:</label>
+			<input type="text" name="username" id="account" autofocus required class="mui-input-clear mui-input" placeholder="{% trans 'Please input your username' %}"/>
+		</div>
+		<div class="mui-input-row">
+			<label>{% trans "password" %}:</label>
+			<input id='password' type="password" class="mui-input-clear mui-input" placeholder="{% trans 'Please input your password' %}">
+		</div>
+		<input type="hidden" name="password" id="pwd" />
+		<input type="submit" id="submitBtn" style="visibility: hidden;" />
+		{% if form.errors and not form.non_field_errors %}
+			<div align="center" class="customized-error-class" >
+				{% if form.errors.items|length == 1 %}{% trans "Please correct the error below." %}{% else %}{% trans "Please correct the errors below." %}{% endif %}
+				{{form.errors}}
+			</div><br />
+		{% endif %}
+		{% if form.non_field_errors %}
+			{% for error in form.non_field_errors %}
+			<div align="center" class="customized-error-class" >
+				{{ error }}
+			</div><br />
+			{% endfor %}
+		{% endif %}
+		{% if user.is_authenticated %}
+			<div align="center" class="customized-error-class" >
+			{% blocktrans trimmed %}
+				You are authenticated as {{ username }}, but are not authorized to
+				access this page. Would you like to login to a different account?
+			{% endblocktrans %}
+			</div><br />
+		{% endif %}
+	</form>
+	
+	<div class="mui-content-padded">
+		<button id='login' class="mui-btn mui-btn-block mui-btn-primary" >{% trans "login" %}</button>
+		<div class="link-area" align="center"><a href="{% url 'user-register' %}" >{% trans "register" %}</a> <span class="spliter">|</span> <a href="{% url 'about-us' %}" >{% trans "about us" %}</a>
+			<!-- <a href="/login/forgotten" >trans "forget password"</a> -->
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="{% static 'js/mui.enterfocus.js' %}" ></script>
+<script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.md5.js' %}"></script>
+<script type="text/javascript" >
+	var account;
+	var originalpwd;
+	
+	if( 'undefined' == typeof(mui) ){
+		document.getElementById("login").addEventListener("click", function(){
+			document.getElementById("submitBtn").click();
+		});
+	} else {
+		document.getElementById("login").addEventListener("tap", function(){
+			document.getElementById("submitBtn").click();
+		});
+	}
+	
+	function md5pwdfun(){
+		document.getElementById("pwd").value = $.md5(originalpwd);
+		document.getElementById("password").value = '';
+	}
+	function checkform(){
+		originalpwd = document.getElementById("password").value;
+		account = document.getElementById("account").value;
+		if( 1 > originalpwd.length ){
+			alert( '{% trans "Please input your password" %}');
+			return false;
+		}
+		if( 1 > account.length ){
+			alert( '{% trans "Please input your username" %}');
+			return false;
+		}
+		md5pwdfun();
+		return true;
+	}
+</script>
+{% endblock %}

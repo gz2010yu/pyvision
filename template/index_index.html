@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n static %}
+{% load basic_extras %}
+
+{% block content %}
+<div class="mui-content">
+	<div class="title">
+		{% trans "demo images by admin " %}{{ firstadmin_name }}
+	</div>
+	<ul class="mui-table-view mui-table-view-chevron">
+		{% for one_record in images %}
+		<li class="mui-table-view-cell mui-media">
+			<a class="mui-navigate-right" href="{% url 'one-admin-image' image_id=one_record.image_id pagenum=images.number %}" >
+				<img class="mui-media-object mui-pull-left" src="{{ one_record.file_path|getOneThumbnailBase64 }}">
+				<div class="mui-media-body">
+					{{one_record.user_label}}
+					<p class='mui-ellipsis'>{{one_record.upload_time|customizedlocaltime:tzname }}</p>
+					<!-- <p class='mui-ellipsis'>one_record.recognized}}</p> -->
+				</div>
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+	<ul class="mui-pager">
+		{% if images.has_previous %}
+			<li><a href="?page=1">&laquo; 1</a></li>
+			<li><a href="?page={{ images.previous_page_number }}">{% trans "previous" %}</a></li>
+		{% endif %}
+		{% if 1 < images.paginator.num_pages %}
+		<span class="current">
+			<li>{{ images.number }}</li>
+		</span>
+		{% endif %}
+		{% if images.has_next %}
+			<li><a href="?page={{ images.next_page_number }}">{% trans "next" %}</a></li>
+			<li><a href="?page={{ images.paginator.num_pages }}">{{ images.paginator.num_pages }} &raquo;</a></li>
+		{% endif %}
+	</ul>
+	<ul class="mui-table-view" style="margin-top: 20px;">
+		<li class="mui-table-view-cell" style="text-align: center;">
+			{% if logined %}
+			<a href="{% url 'home-index' %}">{% trans "Home" %}</a>
+			{% else %}
+			<a href="{% url 'user-login' %}">{% trans "Login" %}</a>
+			{% endif %}
+		</li>
+	</ul>
+</div>
+{% endblock %}

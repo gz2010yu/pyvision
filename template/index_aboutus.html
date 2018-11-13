@@ -1,0 +1,8 @@
+{% extends "home_base_back_arrow.html" %}
+
+{% block under-title %}
+<div style="margin-top: 75px;"></div>
+{% for oneline in contents %}
+<div class="title">{{oneline}}</div>
+{% endfor %}
+{% endblock %}

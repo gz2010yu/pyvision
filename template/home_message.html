@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load i18n static %}
+{% load basic_extras %}
+
+{% block content %}
+<script type="text/javascript" src="{% static 'js/mui.min.js' %}" ></script>
+<script>
+	mui.init({
+		swipeBack:true //启用右滑关闭功能
+	});
+</script>
+<header class="mui-bar mui-bar-nav">
+	<a class="mui-icon mui-icon-left-nav mui-pull-left" href="{% url 'message-list' %}" ></a>
+	<h1 class="mui-title">{{page_title}} | {% trans "photo pocket" %}</h1>
+</header>
+<div class="mui-card" style="margin-top: 70px;">
+	{% if '' == error_msg %}
+	<div class="mui-card-header" style="font:bold;font-size: 19px" align="center">{{message.message_title}}</div>
+	<div class="mui-card-content">
+		<div class="mui-card-content-inner">{{message.message_body}}</div>
+	</div>
+	<div class="mui-card-footer" align="center">
+		{{message.send_time|customizedlocaltime:tzname }} | {% trans "From" %}: {{from_user_full_name}}
+	</div>
+	{% else %}
+	<div align="center" class="customized-error-class" >{{error_msg}}</div><br />
+	{% endif %}
+</div>
+{% endblock %}

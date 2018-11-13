@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	{% load basic_extras %}
+	{% load i18n %}
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>{% trans "debug page" %}</title>
+</head>
+<body>
+	{% if show %}
+	{% get_current_language as LANGUAGE_CODE %}
+	Current language: {{ LANGUAGE_CODE }}<br />
+	<p>{% trans "username" %}</p><br />
+	{% language 'en' %}
+	{% get_current_language as LANGUAGE_CODE %}
+		Current language: {{ LANGUAGE_CODE }}
+		<p>{% trans "username" %}</p>
+	{% endlanguage %}
+	<div class="flex-center">
+		<div class="container">
+			<div>
+				{% for key, value in records.items %}
+					<p>{{key}}</p>
+					{% for one_record in value %}
+					{{ one_record|readdb }}<br />
+					{% endfor %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	{% else %}
+	Nothing to show
+	{% endif %}
+</body>
+</html>

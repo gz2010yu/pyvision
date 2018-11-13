@@ -1,0 +1,15 @@
+test.txt
+/temporary/*
+/sae01
+/register/migrations
+/register/__pycache__
+/media/*
+/index/migrations
+/index/__pycache__
+/home/migrations
+/home/__pycache__
+/extend/__pycache__
+/basic/migrations
+/basic/__pycache__
+/basic/templatetags/__pycache__
+/__pycache__

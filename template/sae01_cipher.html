@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	{% load i18n %}
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>{% trans "debug page" %}</title>
+</head>
+<body>
+<div class="flex-center">
+	{% if show %}
+	<div class="container">
+		cipher_key: {{cipher_key}}<br />
+		cipher_key_string: {{cipher_key_string}}<br />
+		encrypted_text: {{encrypted_text}}<br />
+		decrypted_string: {{decrypted_string}}
+	</div>
+	{% else %}
+	Nothing to show
+	{% endif %}
+</div>
+</body>
+</html>

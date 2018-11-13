@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block content %}
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">{{page_title}} | {% trans "photo pocket" %}</h1>
+	</header>
+	{% block under-title %}{% endblock %}
+{% endblock %}

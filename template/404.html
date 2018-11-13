@@ -1,0 +1,11 @@
+{% extends "error_base.html" %}
+{% load i18n static %}
+
+{% block content %}
+<header class="mui-bar mui-bar-nav">
+	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	<h1 class="mui-title">404 | {% trans "photo pocket" %}</h1>
+</header>
+<div style="margin-top: 75px;"></div>
+<div class="title">{% trans "404: Sorry we cannot find this page." %}</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "home_tabs.html" %}
+{% load i18n static %}
+{% load basic_extras %}
+
+{% block mui-content %}
+<div class="mui-content">
+	<div id="tabbar-with-map" class="mui-control-content mui-active">
+		<br />
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right" href="{% url 'message-list' %}" >
+					{% trans "messages" %}{% if 0 < unread %}<span style="color:red;">({{unread}})</span>{% endif %}
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right" href="{% url 'home-user-privacy' %}" >
+					{% trans "privacy" %}
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right" href="{% url 'home-user-terms' %}" >
+					{% trans "terms" %}
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view" style="margin-top: 25px;">
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right" href="{% url 'home-about-us' %}" >
+					{% trans "about us" %}
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view" style="margin-top: 25px;">
+			<li class="mui-table-view-cell">
+				<a style="text-align: center;color: #FF3B30;" href="{% url 'user-logout' %}" >
+					{% trans "logout" %}
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+{% endblock %}

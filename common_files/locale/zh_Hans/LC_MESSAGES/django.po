@@ -1,0 +1,539 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-01 13:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\basic\models.py:11
+msgid "user birthday"
+msgstr "用户生日"
+
+#: .\basic\models.py:12
+msgid "please select your birthday"
+msgstr "请选择您的生日"
+
+#: .\basic\models.py:17
+msgid "user phone number"
+msgstr "用户座机号码"
+
+#: .\basic\models.py:19
+msgid "please input your phone number"
+msgstr "请输入您的座机号码"
+
+#: .\basic\models.py:24
+msgid "user mobile number"
+msgstr "用户手机号码"
+
+#: .\basic\models.py:26
+msgid "please input your mobile number"
+msgstr "请输入您的手机号码"
+
+#: .\basic\models.py:31
+msgid "user address"
+msgstr "用户地址"
+
+#: .\basic\models.py:33
+msgid "please input your address"
+msgstr "请输入您的地址"
+
+#: .\basic\models.py:38
+msgid "wechat openid"
+msgstr "微信openid"
+
+#: .\basic\models.py:40
+msgid "please provide your WeChat openid"
+msgstr "请提供您的微信openid"
+
+#: .\basic\models.py:85
+msgid "automatically fill in after user logined"
+msgstr "用户登录以后自动填入"
+
+#: .\basic\models.py:99
+msgid "SCS uri"
+msgstr "新浪SCS网址"
+
+#: .\basic\models.py:101
+msgid "automatically fill in SCS uri"
+msgstr "自动填入新浪SCS网址"
+
+#: .\basic\models.py:108
+msgid "original filename"
+msgstr "原始文件名"
+
+#: .\basic\models.py:110
+msgid "original filename provided by user"
+msgstr "原始文件名由用户提供"
+
+#: .\basic\models.py:116
+msgid "recognized catagories"
+msgstr "识别到的类别"
+
+#: .\basic\models.py:118
+msgid "recognized text result by caffe, in dict format, fill automatically"
+msgstr "自动填入由caffe识别到的类别，字典格式"
+
+#: .\basic\models.py:123
+msgid "user label"
+msgstr "标签"
+
+#: .\basic\models.py:125
+msgid "please input a label for this image"
+msgstr "请为本图片输入其标签"
+
+#: .\basic\models.py:156
+msgid "message title"
+msgstr "消息标题"
+
+#: .\basic\models.py:158
+msgid "please input the message title"
+msgstr "请输入消息标题"
+
+#: .\basic\models.py:161
+msgid "message body"
+msgstr "消息内容"
+
+#: .\basic\models.py:163
+msgid "please input the message body"
+msgstr "请输入消息内容"
+
+#: .\basic\templatetags\basic_extras.py:78
+#: .\basic\templatetags\basic_extras.py:87
+msgid "unread"
+msgstr "未读"
+
+#: .\basic\templatetags\basic_extras.py:78
+#: .\basic\templatetags\basic_extras.py:87
+msgid "read"
+msgstr "已读"
+
+#: .\basic\validators.py:16 .\basic\validators.py:60
+#, python-format
+msgid "%(value)s has been registered by another user"
+msgstr "%(value)s用户名已经被占用"
+
+#: .\basic\validators.py:23
+#, python-format
+msgid ""
+" %(value)s should contain only digits, dots, spaces, hyphens, or brackets"
+msgstr "手机号 %(value)s 只能包括数字、点、空格、连字符、或者括号"
+
+#: .\basic\validators.py:35
+#, python-format
+msgid ""
+"User %(username)s has registered using the same email address (%(value)s)"
+msgstr "用户 %(username)s 已经使用 %(value)s 电子邮箱地址注册过了"
+
+#: .\basic\validators.py:44
+#, python-format
+msgid ""
+"invalid username: %(value)s should only contain letters, digits, dots, @, "
+"plus, or hyphens"
+msgstr "用户名错误：%(value)s 只能包括字母、数字、点、@、加号、或者连字符"
+
+#: .\basic\validators.py:49
+#, python-format
+msgid "invalid username: %(value)s should not contain --"
+msgstr "用户名错误：%(value)s 不可以包括连续2个连字符"
+
+#: .\basic\validators.py:77
+#, python-format
+msgid "this image is more than %s MB"
+msgstr "图片大于 %s 兆"
+
+#: .\basic\validators.py:82
+msgid "please do not upload the same image"
+msgstr "请勿重复提交图片"
+
+#: .\basic\views.py:40 .\basic\views.py:51
+msgid "internal action"
+msgstr "仅内部使用"
+
+#: .\home\views.py:68
+msgid "message detail"
+msgstr "消息详情"
+
+#: .\home\views.py:72
+msgid "cannot find this message"
+msgstr "找不到这则消息"
+
+#: .\home\views.py:118 .\template\home_settings.html:12
+msgid "messages"
+msgstr "消息列表"
+
+#: .\home\views.py:151 .\template\home_tabs.html:12
+msgid "home"
+msgstr "首页"
+
+#: .\home\views.py:173
+msgid "image detail"
+msgstr "图片详情"
+
+#: .\home\views.py:195
+msgid "Please login first."
+msgstr "请先登录"
+
+#: .\home\views.py:211
+msgid "cannot find this image."
+msgstr "找不到本图片"
+
+#: .\home\views.py:218 .\home\views.py:220
+msgid "Please provide the image_id."
+msgstr "请提供图片id"
+
+#: .\home\views.py:230 .\template\home_tabs.html:32
+msgid "settings"
+msgstr "设置"
+
+#: .\home\views.py:260 .\home\views.py:272 .\template\home_upload.html:24
+msgid "upload an image"
+msgstr "上传一张图片"
+
+#: .\home\views.py:324
+msgid "fail to upload this image to our image server, please try again."
+msgstr "上传图片服务器失败，请重试"
+
+#: .\index\views.py:23
+msgid "This app is developed by xxx company."
+msgstr "本app由xxx公司开发"
+
+#: .\index\views.py:24
+msgid ""
+"The company owns many non-profit/low-profit projects for educators and "
+"parents."
+msgstr "公司开发运营多个针对家长和教育工作者的非盈利/低利润项目"
+
+#: .\index\views.py:25
+msgid "Photo Pocket is one of these projects."
+msgstr "图片口袋就是这些项目之一"
+
+#: .\index\views.py:26
+msgid "The project aims to provide kids and youths a pocket to store photos. "
+msgstr "本项目为儿童和青少年提供一个能够保存照片的“口袋”"
+
+#: .\index\views.py:32 .\template\home_settings.html:29
+#: .\template\register_login.html:50
+msgid "about us"
+msgstr "关于我们"
+
+#: .\index\views.py:45
+msgid "Terms and Conditions"
+msgstr "条件条款"
+
+#: .\index\views.py:46
+msgid ""
+"These terms of use cover your use of this app and its related websites. "
+"Using this app, you accept all terms of use. If you disagree with any of "
+"these terms, you must not use this app and its websites."
+msgstr ""
+"本使用条款覆盖了您使用本app及其网站的所有活动。使用本app及其网站表示您接受本"
+"条款。如果您不接受任何一款，您不得使用本app及其网站。"
+
+#: .\index\views.py:47
+msgid ""
+"You may download or print this app and its websites for caching purposes and "
+"for your own personal use only. "
+msgstr "只有用于缓存或者自用，您才可以下载或者打印本app及其网站的内容。"
+
+#: .\index\views.py:48
+msgid ""
+"By uploading images, you agree to provide us and our third-parties all these "
+"uploaded images for futher analysis. All images will be owned by us and our "
+"third-parties. "
+msgstr ""
+"当您上传图片到本网站，这表示您同意我们及我们的合作伙伴可以用这些图片来进一步"
+"分析。所上传图片所有权归我们及我们的合作伙伴。"
+
+#: .\index\views.py:52 .\template\home_settings.html:22
+msgid "terms"
+msgstr "条款"
+
+#: .\index\views.py:65 .\index\views.py:75 .\template\register_register.html:60
+msgid "Privacy Statement"
+msgstr "隐私声明"
+
+#: .\index\views.py:66
+msgid ""
+"This Privacy Policy discloses the privacy practices for this app and its "
+"websites. By using this app, you are agreeing to our collection and use of "
+"your information. "
+msgstr ""
+"本隐私声明昭示本app及其网站所实施的隐私信息处理。使用本app表示您同意我们收集"
+"和使用您的信息。"
+
+#: .\index\views.py:67
+msgid "Information gathered during your usage of this app:"
+msgstr "您使用本app时，所收集的信息包括："
+
+#: .\index\views.py:68
+msgid ""
+"We and our third-parties collect your IP address, WeChat openid, browser "
+"type, pages you visited, and other information for purposes such as to "
+"identify the general geographic area, to help you login your account without "
+"entering a password if you use WeChat, and other purposes for reasons listed "
+"below."
+msgstr ""
+"我们和我们的合作者收集您的IP地址，微信openid，浏览器信息，您浏览过的网页，和"
+"其他用于下面目的的信息：分析您大概的地理位置，帮助您通过微信免密码登录，和其"
+"他下述理由。"
+
+#: .\index\views.py:69
+msgid "Reasons for gathering your information:"
+msgstr "收集您信息的理由："
+
+#: .\index\views.py:70
+msgid ""
+"By collecting these information, we can do a better job in systems "
+"administration, abuse prevention, and in user trends understanding."
+msgstr "收集您的信息有助于我们进行系统管理、防止滥用、用户行为分析。"
+
+#: .\index\views.py:71
+msgid ""
+"This Privacy Policy may change from time to time. Any such changes will be "
+"posted on this page. The effective date of this policy is October 22, 2018."
+msgstr "本隐私声明会不断更新并显示在本页面。本次更新生效日期是2018年10月22日。"
+
+#: .\index\views.py:108
+msgid "welcome"
+msgstr "欢迎"
+
+#: .\register\forms.py:12 .\template\register_login.html:16
+#: .\template\register_register.html:17 .\template\sae01_show_db.html:15
+#: .\template\sae01_show_db.html:19
+msgid "username"
+msgstr "用户名"
+
+#: .\register\forms.py:13
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr "必填。最多150个字符；只能是字母、数字、或者@/./+/-/_"
+
+#: .\register\forms.py:16 .\template\register_login.html:20
+#: .\template\register_register.html:21
+msgid "password"
+msgstr "密码"
+
+#: .\register\forms.py:16
+msgid "input your password"
+msgstr "请输入密码"
+
+#: .\register\forms.py:25 .\template\register_register.html:33
+msgid "mobile"
+msgstr "手机号码"
+
+#: .\register\forms.py:26
+msgid "input your mobile number"
+msgstr "请输入手机号码"
+
+#: .\register\views.py:30 .\register\views.py:46
+#: .\template\register_login.html:49
+msgid "login"
+msgstr "登录"
+
+#: .\register\views.py:61 .\register\views.py:70
+#: .\template\register_login.html:50 .\template\register_register.html:53
+msgid "register"
+msgstr "注册"
+
+#: .\register\views.py:96
+msgid "Welcome to Image Pocket"
+msgstr "欢迎注册图片口袋"
+
+#: .\register\views.py:97
+msgid ""
+"Hello there. We are looking forward to serving you via this little piece of "
+"app. We hope you have a great experience in using it. You should recall your "
+"good times while reviewing your old images from time to time"
+msgstr ""
+"您好！我们期待通过本app给您提供良好印象的服务。您可以通过本app回忆您的美好时"
+"光"
+
+#: .\template\400.html:7 .\template\403.html:7 .\template\404.html:7
+#: .\template\500.html:7 .\template\base.html:12 .\template\basic_daily.html:10
+#: .\template\basic_minute.html:10 .\template\error_base.html:12
+#: .\template\home_aboutus.html:7 .\template\home_base.html:6
+#: .\template\home_base_back_arrow.html:7 .\template\home_detail.html:12
+#: .\template\home_message.html:14 .\template\home_messages.html:9
+#: .\template\register_login.html:9 .\template\register_register.html:10
+msgid "photo pocket"
+msgstr "图片口袋"
+
+#: .\template\400.html:10
+msgid "400 Bad Request: Sorry we cannot process this request."
+msgstr "400 Bad Request: 对不起，服务器无法处理该请求。"
+
+#: .\template\403.html:10
+msgid "403: Sorry visiting to this page needs authentication."
+msgstr "403: 对不起，访问该页面需要相应权限。"
+
+#: .\template\404.html:10
+msgid "404: Sorry we cannot find this page."
+msgstr "404: 对不起，该页面不存在。"
+
+#: .\template\500.html:10
+msgid "server busy. please visit later"
+msgstr "服务器繁忙；请稍后再试。"
+
+#: .\template\base.html:40 .\template\error_base.html:40
+msgid "press again for quitting the app"
+msgstr "再按一次退出应用"
+
+#: .\template\error_base.html:12
+msgid "errors"
+msgstr "出错啦"
+
+#: .\template\home_index.html:9
+#, python-format
+msgid "Images uploaded by %(user_name)s:"
+msgstr "%(user_name)s上传过的图片："
+
+#: .\template\home_index.html:28 .\template\home_messages.html:45
+#: .\template\index_index.html:27
+msgid "previous"
+msgstr "前一页"
+
+#: .\template\home_index.html:36 .\template\home_messages.html:53
+#: .\template\index_index.html:35
+msgid "next"
+msgstr "下一页"
+
+#: .\template\home_message.html:23
+msgid "From"
+msgstr "来自"
+
+#: .\template\home_messages.html:30
+msgid "ago"
+msgstr "之前"
+
+#: .\template\home_settings.html:17
+msgid "privacy"
+msgstr "隐私"
+
+#: .\template\home_settings.html:36
+msgid "logout"
+msgstr "登出"
+
+#: .\template\home_tabs.html:20
+msgid "upload"
+msgstr "上传"
+
+#: .\template\home_upload.html:18
+msgid "Please input a note upto 1023 bytes"
+msgstr "请输入小于1023字节的文本"
+
+#: .\template\home_upload.html:26
+#, python-format
+msgid "Select an image upto %(size)s"
+msgstr "选图片（小于%(size)s）"
+
+#: .\template\home_upload.html:33
+msgid "Upload"
+msgstr "上传"
+
+#: .\template\home_upload.html:34
+msgid "Cancel"
+msgstr "取消"
+
+#: .\template\home_upload.html:39 .\template\register_login.html:27
+#: .\template\register_register.html:38
+msgid "Please correct the error below."
+msgstr "请更正下面错误"
+
+#: .\template\home_upload.html:39 .\template\register_login.html:27
+#: .\template\register_register.html:38
+msgid "Please correct the errors below."
+msgstr "请更正下面错误"
+
+#: .\template\index_index.html:8
+msgid "demo images by admin "
+msgstr "示例图片，管理员："
+
+#: .\template\index_index.html:42
+msgid "Home"
+msgstr "首页"
+
+#: .\template\index_index.html:44
+msgid "Login"
+msgstr "登录"
+
+#: .\template\register_login.html:17 .\template\register_login.html:85
+#: .\template\register_register.html:18 .\template\register_register.html:89
+msgid "Please input your username"
+msgstr "请输入您的用户名"
+
+#: .\template\register_login.html:21 .\template\register_login.html:81
+#: .\template\register_register.html:22
+msgid "Please input your password"
+msgstr "请输入您的密码"
+
+#: .\template\register_login.html:40
+#, python-format
+msgid ""
+"You are authenticated as %(username)s, but are not authorized to access this "
+"page. Would you like to login to a different account?"
+msgstr ""
+"您正在以 %(username)s 登录。该用户权限不能访问本页面。您是否需要用另外一个账"
+"号登录？"
+
+#: .\template\register_register.html:25
+msgid "retype pwd"
+msgstr "确认密码"
+
+#: .\template\register_register.html:26 .\template\register_register.html:72
+msgid "Please retype your password"
+msgstr "请再次输入您的密码"
+
+#: .\template\register_register.html:29
+msgid "email"
+msgstr "邮箱"
+
+#: .\template\register_register.html:30 .\template\register_register.html:93
+msgid "Please input your email address"
+msgstr "请输入您的邮箱地址"
+
+#: .\template\register_register.html:34
+msgid "Please input your mobile"
+msgstr "请输入您的手机号码"
+
+#: .\template\register_register.html:56
+msgid "I have read and agreed to the "
+msgstr "我已经阅读并且同意如下"
+
+#: .\template\register_register.html:60
+msgid "terms of use"
+msgstr "使用条款"
+
+#: .\template\register_register.html:60
+msgid "and"
+msgstr "和"
+
+#: .\template\register_register.html:76
+msgid "unmatched passwords"
+msgstr "密码错误"
+
+#: .\template\register_register.html:97
+msgid "Please agree to the terms of use"
+msgstr "请同意使用条款"
+
+#: .\template\sae01_cipher.html:8 .\template\sae01_create.html:9
+#: .\template\sae01_show_db.html:9 .\template\sae01_test.html:9
+msgid "debug page"
+msgstr "调试页面"
+
+#~ msgid "404"
+#~ msgstr "404"
+
+#~ msgid "images uploaded"
+#~ msgstr "已上传图片"

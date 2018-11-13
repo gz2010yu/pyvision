@@ -1,0 +1,42 @@
+{% extends "home_tabs.html" %}
+{% load i18n static %}
+{% load basic_extras %}
+
+{% block mui-content %}
+<div class="mui-content">
+	<div id="tabbar" class="mui-control-content mui-active">
+		<div class="title">
+			{% blocktrans with user_name=user_full_name %}Images uploaded by {{ user_name }}:{% endblocktrans %}
+		</div>
+		<ul class="mui-table-view mui-table-view-chevron">
+			{% for one_image in images %}
+			<li class="mui-table-view-cell mui-media">
+				<a class="mui-navigate-right" href="{% url 'one-single-image' image_id=one_image.image_id pagenum=images.number %}" >
+					<img class="mui-media-object mui-pull-left" src="{{ one_image.file_path|getOneThumbnailBase64 }}" />
+					<div class="mui-media-body">
+						{{one_image.user_label}}
+						<p class='mui-ellipsis'>{{one_image.upload_time|customizedlocaltime:tzname }}</p>
+						<!-- <p class='mui-ellipsis'>one_image.recognized}}</p> -->
+					</div>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+		<ul class="mui-pager">
+			{% if images.has_previous %}
+				<li><a href="?page=1">&laquo; 1</a></li>
+				<li><a href="?page={{ images.previous_page_number }}">{% trans "previous" %}</a></li>
+			{% endif %}
+			{% if 1 < images.paginator.num_pages %}
+			<span class="current">
+				<li>{{ images.number }}</li>
+			</span>
+			{% endif %}
+			{% if images.has_next %}
+				<li><a href="?page={{ images.next_page_number }}">{% trans "next" %}</a></li>
+				<li><a href="?page={{ images.paginator.num_pages }}">{{ images.paginator.num_pages }} &raquo;</a></li>
+			{% endif %}
+		</ul>
+	</div>
+</div>
+{% endblock %}
