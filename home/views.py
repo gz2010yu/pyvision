@@ -2,8 +2,6 @@ import datetime
 from datetime import date
 from io import BytesIO
 import os, logging
-# import shutil, socket
-# import requests
 from PIL import Image as PIL_Image
 
 from django.shortcuts import render
@@ -249,7 +247,7 @@ class UploadView(FormView):
 	upload_file = None
 	sina_scs_prefix = ''
 	max_upload_file_size = 5242880
-	waiting_path = os.path.join( '/local/recognition/', 'images_waiting/' )
+	waiting_path = os.path.join( settings.BASE_DIR, 'recognition/images_waiting/' )
 
 	def get(self, request, *args, **kwargs):
 		userid = self.util.getUserId(request = request)
@@ -310,8 +308,6 @@ class UploadView(FormView):
 			scsResponse = bucket.put( self.sina_scs_prefix + filename, file.read(), self.acl )
 			sinaResponse = scsResponse.urllib2Response
 			if 200 == sinaResponse.code:
-				# write db, sinaResponse.url = 
-				# https://cdn.sinacloud.net/peteryubucket/pocket/u2t20181017_204033_404560.jpg?formatter=json
 				ip = self.util.getRemoteAddress( request)
 				user = self.util.getUser( request, userid)
 				url = sinaResponse.url.replace('http://','https://cdn.')
@@ -320,7 +316,7 @@ class UploadView(FormView):
 				# use uploadModel.image_id as image_id to save the ImageRecognitionSequene table
 				if uploadModel.image_id is not None and 0 < int(uploadModel.image_id):
 					sequene = ImageRecognitionSequene.objects.create(image_id=uploadModel.image_id, file_name=filename)
-				# save file uploaded to /local/recognition/images_waiting
+				# save file uploaded to os.path.join(settings.BASE_DIR, 'recognition/images_waiting/' )
 				try:
 					file.seek(0)
 					with open(self.waiting_path + filename, 'wb+') as destination:

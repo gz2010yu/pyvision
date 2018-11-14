@@ -136,7 +136,7 @@ class InternalMessage(models.Model):
 	from_user = models.ForeignKey(
 		User, on_delete=models.CASCADE, null=False, blank=False,
 	)
-	# even if sent by the system, it will assign one system user as the message sender
+	# even if sent by the system, it will assign one system admin as the message sender
 	to_user_id = models.PositiveIntegerField()
 	# if null, the group field below is required and vice versa
 	group = models.ForeignKey(
@@ -177,8 +177,9 @@ class InternalMessage(models.Model):
 			super().save(*args, **kwargs)
 		
 class UnreadGroupMessage(models.Model):
-	# instead of having a ManyToMany field in Message Model, we create this table
-	# read message will be deleted from this table
+	""" instead of having a ManyToMany field in Message Model, we create this table
+		read message will be deleted from this table
+	"""
 	unread_id = models.AutoField(primary_key=True)
 	message = models.ForeignKey(
 		InternalMessage, on_delete=models.CASCADE, null=False, blank=False,
@@ -191,8 +192,9 @@ class UnreadGroupMessage(models.Model):
 		return str(self.unread_id)
 
 class ImageRecognitionSequene(models.Model):
-	# This table is a temporary table for image recognition
-	# There is no recognition log and results will be written into Image directly
+	""" This table is a temporary table for image recognition
+		There is no recognition log and results will be written into Image directly
+	"""
 	sequene_id = models.AutoField(primary_key=True)
 	image = models.ForeignKey(
 		Image, on_delete=models.CASCADE, null=False, blank=False,

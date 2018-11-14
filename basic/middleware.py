@@ -10,8 +10,10 @@ from sae import settings
 from sae.basic.utils import Util
 
 class CrontabMiddleware:
-	"""The Crontab Middleware will be moved to other place if later a linux crontab is set up."""
-	# currently is disabled in MIDDLEWARE in settings.py
+	"""	The Crontab Middleware will be moved to other place if later a linux crontab is set up.
+		currently is disabled in MIDDLEWARE in settings.py
+	"""
+
 	def __init__(self, get_response):
 		self.get_response = get_response
 		# One-time configuration and initialization.

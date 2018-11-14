@@ -55,7 +55,6 @@ class Util(object):
 		return True
 
 	def getMediaPath(self, file_uri = '', need_filename = False):
-		# file_uri = 'https://cdn.sinacloud.net/peteryubucket/pocket/u2t20181023_180803_166084.jpg?formatter=json'
 		if file_uri is None or '' == file_uri:
 			return ''
 		pos = file_uri.rfind('?')

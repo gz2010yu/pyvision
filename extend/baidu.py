@@ -1,7 +1,6 @@
 # !/usr/bin/env python
-# Author: https://blog.csdn.net/sunchengquan/article/details/82314633
 
-import json, random, logging
+import json, random, logging, os
 import requests, urllib.parse
 from hashlib import md5
 
@@ -13,10 +12,12 @@ class BaiduTranslation(object):
 	code, string = obj.request_baidu()
 	print(code)
 	print(string)
+
+	Author: https://blog.csdn.net/sunchengquan/article/details/82314633
 	"""
 	def __init__(self, fromLang='en',toLang='zh',text=''):
-		self.appid = '20181112000232775'
-		self.secretKey = 'wp00WdyoZiNO2O_bdXk4'
+		self.appid = os.environ.get('baidu_fanyi_appid')
+		self.secretKey = os.environ.get('baidu_fanyi_secretkey')
 		self.uri_base = 'https://api.fanyi.baidu.com/api/trans/vip/translate'
 		self.fromLang = fromLang
 		self.toLang = toLang
