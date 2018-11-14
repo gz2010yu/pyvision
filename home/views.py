@@ -247,7 +247,7 @@ class UploadView(FormView):
 	upload_file = None
 	sina_scs_prefix = ''
 	max_upload_file_size = 5242880
-	waiting_path = os.path.join( settings.BASE_DIR, 'recognition/images_waiting/' )
+	waiting_path = os.path.join( settings.BASE_DIR, '../recognition/images_waiting/' )
 
 	def get(self, request, *args, **kwargs):
 		userid = self.util.getUserId(request = request)

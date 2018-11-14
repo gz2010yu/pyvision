@@ -24,17 +24,16 @@ with open( os.path.join( BASE_DIR, '../secret_key.txt' ) ) as f:
 # DEBUG = True
 DEBUG = False
 
-# after https 443 is ready
-# SECURE_SSL_REDIRECT = True
-# CSRF_COOKIE_SECURE = True
-# SESSION_COOKIE_SECURE = True
-# SECURE_HSTS_SECONDS = 5
-# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-# SECURE_HSTS_PRELOAD = True
+SECURE_SSL_REDIRECT = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_HSTS_SECONDS = 5
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
 
-# SECURE_CONTENT_TYPE_NOSNIFF = True
-# SECURE_BROWSER_XSS_FILTER = True
-# X_FRAME_OPTIONS = 'DENY' # 'SAMEORIGIN'
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+X_FRAME_OPTIONS = 'DENY' # 'SAMEORIGIN'
 
 ALLOWED_HOSTS = [
 	'pyvision.applinzi.com',
@@ -336,3 +335,4 @@ LOGGING = {
 # done 15 Log request.user.pk sometimes is None. Need to change to request.user
 # 16 Set the <img href="uri" /> and write a backend uri for outputing base64 for each image
 # done 17 check all routes for compliance of REST API
+# 18 add one field (count) in Table basic_imagerecognitionsequene; after 3 tries, will delete this record
