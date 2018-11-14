@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-01 13:02+0800\n"
+"POT-Creation-Date: 2018-11-14 23:16+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,60 +58,61 @@ msgstr "微信openid"
 msgid "please provide your WeChat openid"
 msgstr "请提供您的微信openid"
 
-#: .\basic\models.py:85
+#: .\basic\models.py:86
 msgid "automatically fill in after user logined"
 msgstr "用户登录以后自动填入"
 
-#: .\basic\models.py:99
+#: .\basic\models.py:100
 msgid "SCS uri"
 msgstr "新浪SCS网址"
 
-#: .\basic\models.py:101
+#: .\basic\models.py:102
 msgid "automatically fill in SCS uri"
 msgstr "自动填入新浪SCS网址"
 
-#: .\basic\models.py:108
+#: .\basic\models.py:109
 msgid "original filename"
 msgstr "原始文件名"
 
-#: .\basic\models.py:110
+#: .\basic\models.py:111
 msgid "original filename provided by user"
 msgstr "原始文件名由用户提供"
 
-#: .\basic\models.py:116
+#: .\basic\models.py:117
 msgid "recognized catagories"
 msgstr "识别到的类别"
 
-#: .\basic\models.py:118
+#: .\basic\models.py:119
 msgid "recognized text result by caffe, in dict format, fill automatically"
 msgstr "自动填入由caffe识别到的类别，字典格式"
 
-#: .\basic\models.py:123
+#: .\basic\models.py:124
 msgid "user label"
 msgstr "标签"
 
-#: .\basic\models.py:125
+#: .\basic\models.py:126
 msgid "please input a label for this image"
 msgstr "请为本图片输入其标签"
 
-#: .\basic\models.py:156
+#: .\basic\models.py:157
 msgid "message title"
 msgstr "消息标题"
 
-#: .\basic\models.py:158
+#: .\basic\models.py:159
 msgid "please input the message title"
 msgstr "请输入消息标题"
 
-#: .\basic\models.py:161
+#: .\basic\models.py:162
 msgid "message body"
 msgstr "消息内容"
 
-#: .\basic\models.py:163
+#: .\basic\models.py:164
 msgid "please input the message body"
 msgstr "请输入消息内容"
 
 #: .\basic\templatetags\basic_extras.py:78
 #: .\basic\templatetags\basic_extras.py:87
+#: .\basic\templatetags\basic_extras.py:123
 msgid "unread"
 msgstr "未读"
 
@@ -119,6 +120,10 @@ msgstr "未读"
 #: .\basic\templatetags\basic_extras.py:87
 msgid "read"
 msgstr "已读"
+
+#: .\basic\templatetags\basic_extras.py:103
+msgid "day(s)"
+msgstr "天"
 
 #: .\basic\validators.py:16 .\basic\validators.py:60
 #, python-format
@@ -158,51 +163,51 @@ msgstr "图片大于 %s 兆"
 msgid "please do not upload the same image"
 msgstr "请勿重复提交图片"
 
-#: .\basic\views.py:40 .\basic\views.py:51
+#: .\basic\views.py:22
 msgid "internal action"
 msgstr "仅内部使用"
 
-#: .\home\views.py:68
+#: .\home\views.py:65
 msgid "message detail"
 msgstr "消息详情"
 
-#: .\home\views.py:72
+#: .\home\views.py:69
 msgid "cannot find this message"
 msgstr "找不到这则消息"
 
-#: .\home\views.py:118 .\template\home_settings.html:12
+#: .\home\views.py:115 .\template\home_settings.html:12
 msgid "messages"
 msgstr "消息列表"
 
-#: .\home\views.py:151 .\template\home_tabs.html:12
+#: .\home\views.py:148 .\template\home_tabs.html:12
 msgid "home"
 msgstr "首页"
 
-#: .\home\views.py:173
+#: .\home\views.py:170
 msgid "image detail"
 msgstr "图片详情"
 
-#: .\home\views.py:195
+#: .\home\views.py:192
 msgid "Please login first."
 msgstr "请先登录"
 
-#: .\home\views.py:211
+#: .\home\views.py:208
 msgid "cannot find this image."
 msgstr "找不到本图片"
 
-#: .\home\views.py:218 .\home\views.py:220
+#: .\home\views.py:215 .\home\views.py:217
 msgid "Please provide the image_id."
 msgstr "请提供图片id"
 
-#: .\home\views.py:230 .\template\home_tabs.html:32
+#: .\home\views.py:227 .\template\home_tabs.html:32
 msgid "settings"
 msgstr "设置"
 
-#: .\home\views.py:260 .\home\views.py:272 .\template\home_upload.html:24
+#: .\home\views.py:258 .\home\views.py:270 .\template\home_upload.html:24
 msgid "upload an image"
 msgstr "上传一张图片"
 
-#: .\home\views.py:324
+#: .\home\views.py:335
 msgid "fail to upload this image to our image server, please try again."
 msgstr "上传图片服务器失败，请重试"
 
@@ -393,6 +398,14 @@ msgstr "再按一次退出应用"
 #: .\template\error_base.html:12
 msgid "errors"
 msgstr "出错啦"
+
+#: .\template\home_detail.html:26
+msgid "recognition catagories"
+msgstr "识别到的类别"
+
+#: .\template\home_detail.html:27
+msgid "time consumed"
+msgstr "包括等待的总耗时"
 
 #: .\template\home_index.html:9
 #, python-format

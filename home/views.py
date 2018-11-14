@@ -184,7 +184,7 @@ class ImageDetailView(DetailView):
 					try:
 						image = Image.objects.filter(
 							user__exact=user,
-						).only("image_id", "upload_time", "file_path", "recognized","user_label",).get(image_id=image_id)
+						).only("image_id", "upload_time", "file_path", "recognized","recognized_time","user_label",).get(image_id=image_id)
 					except Image.DoesNotExist:
 						message = 'inside get method in sae.sae.home.views.ImageDetailView\r\n'
 						message += 'Image.DoesNotExist: image_id = ' + str(image_id) + ' and userid = ' + str(userid)
@@ -198,7 +198,7 @@ class ImageDetailView(DetailView):
 					is_staff = False
 					is_superuser = False
 					try:
-						image = Image.objects.only("user", "image_id", "upload_time", "file_path", "recognized","user_label",).get(image_id=image_id)
+						image = Image.objects.only("user", "image_id", "upload_time", "file_path", "recognized","recognized_time", "user_label",).get(image_id=image_id)
 						is_staff = image.user.is_staff
 						is_superuser = image.user.is_superuser
 					except Image.DoesNotExist:

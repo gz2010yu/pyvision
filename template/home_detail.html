@@ -22,7 +22,10 @@
 			<p style="color: #333;">{{image.user_label}}</p>
 		</div>
 	</div>
-	<!-- <div class="mui-card-footer" align="center">  image.recognized}}</div> -->
+	<div class="mui-card-footer">
+		<div>{% trans "recognition catagories" %}: {{image.recognized|getRecognizedString}}</div>
+		<div>{% trans "time consumed" %}: {{image.upload_time|getTimeSpan:image.recognized_time }}</div>
+	</div>
 	{% else %}
 	<div align="center" class="customized-error-class" >
 		{{ error_msg }}
