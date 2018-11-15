@@ -23,8 +23,8 @@
 		</div>
 	</div>
 	<div class="mui-card-footer">
-		<div>{% trans "recognition catagories" %}: {{image.recognized|getRecognizedString}}</div>
-		<div>{% trans "time consumed" %}: {{image.upload_time|getTimeSpan:image.recognized_time }}</div>
+		<span>{% trans "recognition catagories" %}: {{image.recognized|getRecognizedString}}</span>
+		<span>{% trans "time consumed" %}: {{image.upload_time|getTimeSpan:image.recognized_time }}</span>
 	</div>
 	{% else %}
 	<div align="center" class="customized-error-class" >

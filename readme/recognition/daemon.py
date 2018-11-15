@@ -253,7 +253,11 @@ class DaemonPyvision(Daemon):
 									daemon_logger.error( msg )
 								else:
 									count = 0
-									sql='UPDATE basic_image SET recognized="%s", recognized_time=SYSDATE() where image_id="%s"' % (label, image_id)
+									if 0 < label.count('"'):
+										new = label.replace("'", "''")
+										sql='''UPDATE basic_image SET recognized='%s', recognized_time=SYSDATE() where image_id="%s"''' % (new, image_id)
+									else:
+										sql='UPDATE basic_image SET recognized="%s", recognized_time=SYSDATE() where image_id="%s"' % (label, image_id)
 									try:
 										pooled = PooledMySQL()
 										cursor = pooled.get_cursor()
