@@ -335,4 +335,4 @@ LOGGING = {
 # done 15 Log request.user.pk sometimes is None. Need to change to request.user
 # 16 Set the <img href="uri" /> and write a backend uri for outputing base64 for each image
 # done 17 check all routes for compliance of REST API
-# 18 add one field (count) in Table basic_imagerecognitionsequene; after 3 tries, will delete this record
+# done, use other method to do it. 18 add one field (count) in Table basic_imagerecognitionsequene; after 3 tries, will delete this record

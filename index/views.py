@@ -2,14 +2,44 @@ import datetime
 
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.views.generic.list import ListView
 from django.db.models import Q
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
-from sae.basic.models import User, Image
+from sae.basic.models import User, Image, SynsetWords
 from sae.basic.utils import Util
 from sae import settings
+
+class ObjectListView(ListView):
+	template_name = 'index_objects.html'
+
+	def get(self, request, *args, **kwargs):
+		try:
+			objects = SynsetWords.objects.order_by('word_id').only('word_id', 'label')
+		except SynsetWords.DoesNotExist:
+			objects = None
+		if objects is not None:
+			paginator = Paginator(objects, 50, settings.ORPHANS, settings.ALLOW_EMPTY_FIRST_PAGE) # settings.PER_PAGE
+			page = request.GET.get('page')
+			if page is None:
+				page = 1
+			objects = paginator.get_page(page)
+		variables = {
+			'objects': objects,
+			'page_title': _('objects'),
+		}
+		return render(request, self.template_name, variables)
+
+class InstructionView(TemplateView):
+	template_name = 'index_instruction.html'
+
+	def get(self, request, *args, **kwargs):
+		variables = {
+			'page_title': _("Instructions"),
+		}
+		return render(request, self.template_name, variables)
 
 class AboutUsView(TemplateView):
 	template_name = 'index_aboutus.html'

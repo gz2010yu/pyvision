@@ -279,6 +279,8 @@ class DaemonPyvision(Daemon):
 									cursor = pooled.get_cursor()
 									count = cursor.execute(sql)
 									pooled.conn.commit()
+									if one in self.check_deadlock.keys():
+										del self.check_deadlock[one]
 								except Exception as ex:
 									msg = ' PooledMySQL failed to delete one record in Table basic_imagerecognitionsequene in check_result_files method in DaemonPyvision class: '
 									msg += 'sql = '+ sql + '. Exception = ' + str(ex)
@@ -296,9 +298,47 @@ class DaemonPyvision(Daemon):
 					daemon_logger.error( ' Exception in check_result_files method in DaemonPyvision class: ex = ' + str(ex) )
 		return True
 
+	def delete_sequene_db_record(self, image_file_name):
+		if image_file_name is None or '' == image_file_name:
+			return False
+		sql = "SELECT * FROM basic_imagerecognitionsequene WHERE file_name=\"" + image_file_name + "\""
+		sequene_id = 0
+		temp = None
+		try:
+			pooled = PooledMySQL()
+			cursor = pooled.get_cursor()
+			cursor.execute(sql)
+			temp = cursor.fetchone()
+		except Exception as ex:
+			msg = ' PooledMySQL returns wrong response in delete_sequene_db_record method in DaemonPyvision class: '
+			msg += 'sql = '+ sql + '. Exception = ' + str(ex)
+			daemon_logger.error( msg )
+		finally:
+			pooled.close()
+		# get this record first then delete it
+		if temp is not None:
+			sequene_id = temp[0]
+			sql = "DELETE FROM basic_imagerecognitionsequene WHERE sequene_id=" + str(sequene_id)
+			try:
+				pooled = PooledMySQL()
+				cursor = pooled.get_cursor()
+				count = cursor.execute(sql)
+				pooled.conn.commit()
+				if image_file_name in self.check_deadlock.keys():
+					del self.check_deadlock[image_file_name]
+			except Exception as ex:
+				msg = ' PooledMySQL failed to delete one record in Table basic_imagerecognitionsequene in delete_sequene_db_record method in DaemonPyvision class: '
+				msg += 'sql = '+ sql + '. Exception = ' + str(ex)
+				daemon_logger.error( msg )
+			finally:
+				pooled.close()
+			return True
+		return False
+
 	# override _run method of parent class Daemon
 	def _run(self, *args, **kwargs):
 		image_file_name = ''
+		self.check_deadlock = {}
 		while True:
 			if '' == image_file_name:
 				image_file_name = self.check_sequene()
@@ -309,12 +349,19 @@ class DaemonPyvision(Daemon):
 			elif os.path.isfile( self.signal_file ):
 				# caffe is running to recognize other images
 				time.sleep(2)
+			elif image_file_name in self.check_deadlock.keys() and 4 < self.check_deadlock[image_file_name]:
+				# set 4 attemps to be considered as a deadlock
+				self.delete_sequene_db_record(image_file_name)
 			else:
 				# has images(an image) for recognition
 				try:
 					with open(self.signal_file, 'w+') as f:
 						os.chown( self.signal_file, 33, 33)
 						f.write( image_file_name )
+						if image_file_name in self.check_deadlock.keys():
+							self.check_deadlock[image_file_name] += 1
+						else:
+							self.check_deadlock[image_file_name] = 1
 						image_file_name = ''
 				except Exception as ex:
 					daemon_logger.error( ' Error in writing signal_file %s: Inside _run method of DaemonPyvision. %s \n' % (self.signal_file, str(ex), ) )

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-14 23:16+0800\n"
+"POT-Creation-Date: 2018-11-15 23:59+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,227 +18,251 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: .\basic\models.py:11
+#: .\pyvision_production\sae\sae\basic\models.py:11 .\sae\basic\models.py:11
 msgid "user birthday"
 msgstr "用户生日"
 
-#: .\basic\models.py:12
+#: .\pyvision_production\sae\sae\basic\models.py:12 .\sae\basic\models.py:12
 msgid "please select your birthday"
 msgstr "请选择您的生日"
 
-#: .\basic\models.py:17
+#: .\pyvision_production\sae\sae\basic\models.py:17 .\sae\basic\models.py:17
 msgid "user phone number"
 msgstr "用户座机号码"
 
-#: .\basic\models.py:19
+#: .\pyvision_production\sae\sae\basic\models.py:19 .\sae\basic\models.py:19
 msgid "please input your phone number"
 msgstr "请输入您的座机号码"
 
-#: .\basic\models.py:24
+#: .\pyvision_production\sae\sae\basic\models.py:24 .\sae\basic\models.py:24
 msgid "user mobile number"
 msgstr "用户手机号码"
 
-#: .\basic\models.py:26
+#: .\pyvision_production\sae\sae\basic\models.py:26 .\sae\basic\models.py:26
 msgid "please input your mobile number"
 msgstr "请输入您的手机号码"
 
-#: .\basic\models.py:31
+#: .\pyvision_production\sae\sae\basic\models.py:31 .\sae\basic\models.py:31
 msgid "user address"
 msgstr "用户地址"
 
-#: .\basic\models.py:33
+#: .\pyvision_production\sae\sae\basic\models.py:33 .\sae\basic\models.py:33
 msgid "please input your address"
 msgstr "请输入您的地址"
 
-#: .\basic\models.py:38
+#: .\pyvision_production\sae\sae\basic\models.py:38 .\sae\basic\models.py:38
 msgid "wechat openid"
 msgstr "微信openid"
 
-#: .\basic\models.py:40
+#: .\pyvision_production\sae\sae\basic\models.py:40 .\sae\basic\models.py:40
 msgid "please provide your WeChat openid"
 msgstr "请提供您的微信openid"
 
-#: .\basic\models.py:86
+#: .\pyvision_production\sae\sae\basic\models.py:85 .\sae\basic\models.py:86
 msgid "automatically fill in after user logined"
 msgstr "用户登录以后自动填入"
 
-#: .\basic\models.py:100
+#: .\pyvision_production\sae\sae\basic\models.py:99 .\sae\basic\models.py:100
 msgid "SCS uri"
 msgstr "新浪SCS网址"
 
-#: .\basic\models.py:102
+#: .\pyvision_production\sae\sae\basic\models.py:101 .\sae\basic\models.py:102
 msgid "automatically fill in SCS uri"
 msgstr "自动填入新浪SCS网址"
 
-#: .\basic\models.py:109
+#: .\pyvision_production\sae\sae\basic\models.py:108 .\sae\basic\models.py:109
 msgid "original filename"
 msgstr "原始文件名"
 
-#: .\basic\models.py:111
+#: .\pyvision_production\sae\sae\basic\models.py:110 .\sae\basic\models.py:111
 msgid "original filename provided by user"
 msgstr "原始文件名由用户提供"
 
-#: .\basic\models.py:117
+#: .\pyvision_production\sae\sae\basic\models.py:116 .\sae\basic\models.py:117
 msgid "recognized catagories"
 msgstr "识别到的类别"
 
-#: .\basic\models.py:119
+#: .\pyvision_production\sae\sae\basic\models.py:118 .\sae\basic\models.py:119
 msgid "recognized text result by caffe, in dict format, fill automatically"
 msgstr "自动填入由caffe识别到的类别，字典格式"
 
-#: .\basic\models.py:124
+#: .\pyvision_production\sae\sae\basic\models.py:123 .\sae\basic\models.py:124
 msgid "user label"
 msgstr "标签"
 
-#: .\basic\models.py:126
+#: .\pyvision_production\sae\sae\basic\models.py:125 .\sae\basic\models.py:126
 msgid "please input a label for this image"
 msgstr "请为本图片输入其标签"
 
-#: .\basic\models.py:157
+#: .\pyvision_production\sae\sae\basic\models.py:156 .\sae\basic\models.py:157
 msgid "message title"
 msgstr "消息标题"
 
-#: .\basic\models.py:159
+#: .\pyvision_production\sae\sae\basic\models.py:158 .\sae\basic\models.py:159
 msgid "please input the message title"
 msgstr "请输入消息标题"
 
-#: .\basic\models.py:162
+#: .\pyvision_production\sae\sae\basic\models.py:161 .\sae\basic\models.py:162
 msgid "message body"
 msgstr "消息内容"
 
-#: .\basic\models.py:164
+#: .\pyvision_production\sae\sae\basic\models.py:163 .\sae\basic\models.py:164
 msgid "please input the message body"
 msgstr "请输入消息内容"
 
-#: .\basic\templatetags\basic_extras.py:78
-#: .\basic\templatetags\basic_extras.py:87
-#: .\basic\templatetags\basic_extras.py:123
+#: .\pyvision_production\sae\sae\basic\templatetags\basic_extras.py:78
+#: .\pyvision_production\sae\sae\basic\templatetags\basic_extras.py:87
+#: .\sae\basic\templatetags\basic_extras.py:78
+#: .\sae\basic\templatetags\basic_extras.py:87
+#: .\sae\basic\templatetags\basic_extras.py:134
 msgid "unread"
 msgstr "未读"
 
-#: .\basic\templatetags\basic_extras.py:78
-#: .\basic\templatetags\basic_extras.py:87
+#: .\pyvision_production\sae\sae\basic\templatetags\basic_extras.py:78
+#: .\pyvision_production\sae\sae\basic\templatetags\basic_extras.py:87
+#: .\sae\basic\templatetags\basic_extras.py:78
+#: .\sae\basic\templatetags\basic_extras.py:87
 msgid "read"
 msgstr "已读"
 
-#: .\basic\templatetags\basic_extras.py:103
-msgid "day(s)"
-msgstr "天"
-
-#: .\basic\validators.py:16 .\basic\validators.py:60
+#: .\pyvision_production\sae\sae\basic\validators.py:16
+#: .\pyvision_production\sae\sae\basic\validators.py:60
+#: .\sae\basic\validators.py:16 .\sae\basic\validators.py:60
 #, python-format
 msgid "%(value)s has been registered by another user"
 msgstr "%(value)s用户名已经被占用"
 
-#: .\basic\validators.py:23
+#: .\pyvision_production\sae\sae\basic\validators.py:23
+#: .\sae\basic\validators.py:23
 #, python-format
 msgid ""
 " %(value)s should contain only digits, dots, spaces, hyphens, or brackets"
 msgstr "手机号 %(value)s 只能包括数字、点、空格、连字符、或者括号"
 
-#: .\basic\validators.py:35
+#: .\pyvision_production\sae\sae\basic\validators.py:35
+#: .\sae\basic\validators.py:35
 #, python-format
 msgid ""
 "User %(username)s has registered using the same email address (%(value)s)"
 msgstr "用户 %(username)s 已经使用 %(value)s 电子邮箱地址注册过了"
 
-#: .\basic\validators.py:44
+#: .\pyvision_production\sae\sae\basic\validators.py:44
+#: .\sae\basic\validators.py:44
 #, python-format
 msgid ""
 "invalid username: %(value)s should only contain letters, digits, dots, @, "
 "plus, or hyphens"
 msgstr "用户名错误：%(value)s 只能包括字母、数字、点、@、加号、或者连字符"
 
-#: .\basic\validators.py:49
+#: .\pyvision_production\sae\sae\basic\validators.py:49
+#: .\sae\basic\validators.py:49
 #, python-format
 msgid "invalid username: %(value)s should not contain --"
 msgstr "用户名错误：%(value)s 不可以包括连续2个连字符"
 
-#: .\basic\validators.py:77
+#: .\pyvision_production\sae\sae\basic\validators.py:77
+#: .\sae\basic\validators.py:77
 #, python-format
 msgid "this image is more than %s MB"
 msgstr "图片大于 %s 兆"
 
-#: .\basic\validators.py:82
+#: .\pyvision_production\sae\sae\basic\validators.py:82
+#: .\sae\basic\validators.py:82
 msgid "please do not upload the same image"
 msgstr "请勿重复提交图片"
 
-#: .\basic\views.py:22
+#: .\pyvision_production\sae\sae\basic\views.py:40
+#: .\pyvision_production\sae\sae\basic\views.py:51 .\sae\basic\views.py:22
 msgid "internal action"
 msgstr "仅内部使用"
 
-#: .\home\views.py:65
+#: .\pyvision_production\sae\sae\home\views.py:68 .\sae\home\views.py:65
 msgid "message detail"
 msgstr "消息详情"
 
-#: .\home\views.py:69
+#: .\pyvision_production\sae\sae\home\views.py:72 .\sae\home\views.py:69
 msgid "cannot find this message"
 msgstr "找不到这则消息"
 
-#: .\home\views.py:115 .\template\home_settings.html:12
+#: .\pyvision_production\sae\sae\home\views.py:118
+#: .\pyvision_production\sae\sae\template\home_settings.html:12
+#: .\sae\home\views.py:115 .\sae\template\home_settings.html:12
 msgid "messages"
 msgstr "消息列表"
 
-#: .\home\views.py:148 .\template\home_tabs.html:12
+#: .\pyvision_production\sae\sae\home\views.py:151
+#: .\pyvision_production\sae\sae\template\home_tabs.html:12
+#: .\sae\home\views.py:148 .\sae\template\home_tabs.html:12
 msgid "home"
 msgstr "首页"
 
-#: .\home\views.py:170
+#: .\pyvision_production\sae\sae\home\views.py:173 .\sae\home\views.py:170
 msgid "image detail"
 msgstr "图片详情"
 
-#: .\home\views.py:192
+#: .\pyvision_production\sae\sae\home\views.py:195 .\sae\home\views.py:192
 msgid "Please login first."
 msgstr "请先登录"
 
-#: .\home\views.py:208
+#: .\pyvision_production\sae\sae\home\views.py:211 .\sae\home\views.py:208
 msgid "cannot find this image."
 msgstr "找不到本图片"
 
-#: .\home\views.py:215 .\home\views.py:217
+#: .\pyvision_production\sae\sae\home\views.py:218
+#: .\pyvision_production\sae\sae\home\views.py:220 .\sae\home\views.py:215
+#: .\sae\home\views.py:217
 msgid "Please provide the image_id."
 msgstr "请提供图片id"
 
-#: .\home\views.py:227 .\template\home_tabs.html:32
+#: .\pyvision_production\sae\sae\home\views.py:230
+#: .\pyvision_production\sae\sae\template\home_tabs.html:32
+#: .\sae\home\views.py:227 .\sae\template\home_tabs.html:32
 msgid "settings"
 msgstr "设置"
 
-#: .\home\views.py:258 .\home\views.py:270 .\template\home_upload.html:24
+#: .\pyvision_production\sae\sae\home\views.py:260
+#: .\pyvision_production\sae\sae\home\views.py:272
+#: .\pyvision_production\sae\sae\template\home_upload.html:24
+#: .\sae\home\views.py:258 .\sae\home\views.py:270
+#: .\sae\template\home_upload.html:24
 msgid "upload an image"
 msgstr "上传一张图片"
 
-#: .\home\views.py:335
+#: .\pyvision_production\sae\sae\home\views.py:324 .\sae\home\views.py:335
 msgid "fail to upload this image to our image server, please try again."
 msgstr "上传图片服务器失败，请重试"
 
-#: .\index\views.py:23
+#: .\pyvision_production\sae\sae\index\views.py:23 .\sae\index\views.py:83
 msgid "This app is developed by xxx company."
 msgstr "本app由xxx公司开发"
 
-#: .\index\views.py:24
+#: .\pyvision_production\sae\sae\index\views.py:24 .\sae\index\views.py:84
 msgid ""
 "The company owns many non-profit/low-profit projects for educators and "
 "parents."
 msgstr "公司开发运营多个针对家长和教育工作者的非盈利/低利润项目"
 
-#: .\index\views.py:25
+#: .\pyvision_production\sae\sae\index\views.py:25 .\sae\index\views.py:85
 msgid "Photo Pocket is one of these projects."
 msgstr "图片口袋就是这些项目之一"
 
-#: .\index\views.py:26
+#: .\pyvision_production\sae\sae\index\views.py:26 .\sae\index\views.py:86
 msgid "The project aims to provide kids and youths a pocket to store photos. "
 msgstr "本项目为儿童和青少年提供一个能够保存照片的“口袋”"
 
-#: .\index\views.py:32 .\template\home_settings.html:29
-#: .\template\register_login.html:50
+#: .\pyvision_production\sae\sae\index\views.py:32
+#: .\pyvision_production\sae\sae\template\home_settings.html:29
+#: .\pyvision_production\sae\sae\template\register_login.html:50
+#: .\sae\index\views.py:92 .\sae\template\home_settings.html:29
+#: .\sae\template\register_login.html:50
 msgid "about us"
 msgstr "关于我们"
 
-#: .\index\views.py:45
+#: .\pyvision_production\sae\sae\index\views.py:45 .\sae\index\views.py:105
 msgid "Terms and Conditions"
 msgstr "条件条款"
 
-#: .\index\views.py:46
+#: .\pyvision_production\sae\sae\index\views.py:46 .\sae\index\views.py:106
 msgid ""
 "These terms of use cover your use of this app and its related websites. "
 "Using this app, you accept all terms of use. If you disagree with any of "
@@ -247,13 +271,13 @@ msgstr ""
 "本使用条款覆盖了您使用本app及其网站的所有活动。使用本app及其网站表示您接受本"
 "条款。如果您不接受任何一款，您不得使用本app及其网站。"
 
-#: .\index\views.py:47
+#: .\pyvision_production\sae\sae\index\views.py:47 .\sae\index\views.py:107
 msgid ""
 "You may download or print this app and its websites for caching purposes and "
 "for your own personal use only. "
 msgstr "只有用于缓存或者自用，您才可以下载或者打印本app及其网站的内容。"
 
-#: .\index\views.py:48
+#: .\pyvision_production\sae\sae\index\views.py:48 .\sae\index\views.py:108
 msgid ""
 "By uploading images, you agree to provide us and our third-parties all these "
 "uploaded images for futher analysis. All images will be owned by us and our "
@@ -262,15 +286,21 @@ msgstr ""
 "当您上传图片到本网站，这表示您同意我们及我们的合作伙伴可以用这些图片来进一步"
 "分析。所上传图片所有权归我们及我们的合作伙伴。"
 
-#: .\index\views.py:52 .\template\home_settings.html:22
+#: .\pyvision_production\sae\sae\index\views.py:52
+#: .\pyvision_production\sae\sae\template\home_settings.html:22
+#: .\sae\index\views.py:112 .\sae\template\home_settings.html:22
 msgid "terms"
 msgstr "条款"
 
-#: .\index\views.py:65 .\index\views.py:75 .\template\register_register.html:60
+#: .\pyvision_production\sae\sae\index\views.py:65
+#: .\pyvision_production\sae\sae\index\views.py:75
+#: .\pyvision_production\sae\sae\template\register_register.html:60
+#: .\sae\index\views.py:125 .\sae\index\views.py:135
+#: .\sae\template\register_register.html:60
 msgid "Privacy Statement"
 msgstr "隐私声明"
 
-#: .\index\views.py:66
+#: .\pyvision_production\sae\sae\index\views.py:66 .\sae\index\views.py:126
 msgid ""
 "This Privacy Policy discloses the privacy practices for this app and its "
 "websites. By using this app, you are agreeing to our collection and use of "
@@ -279,11 +309,11 @@ msgstr ""
 "本隐私声明昭示本app及其网站所实施的隐私信息处理。使用本app表示您同意我们收集"
 "和使用您的信息。"
 
-#: .\index\views.py:67
+#: .\pyvision_production\sae\sae\index\views.py:67 .\sae\index\views.py:127
 msgid "Information gathered during your usage of this app:"
 msgstr "您使用本app时，所收集的信息包括："
 
-#: .\index\views.py:68
+#: .\pyvision_production\sae\sae\index\views.py:68 .\sae\index\views.py:128
 msgid ""
 "We and our third-parties collect your IP address, WeChat openid, browser "
 "type, pages you visited, and other information for purposes such as to "
@@ -295,68 +325,91 @@ msgstr ""
 "其他用于下面目的的信息：分析您大概的地理位置，帮助您通过微信免密码登录，和其"
 "他下述理由。"
 
-#: .\index\views.py:69
+#: .\pyvision_production\sae\sae\index\views.py:69 .\sae\index\views.py:129
 msgid "Reasons for gathering your information:"
 msgstr "收集您信息的理由："
 
-#: .\index\views.py:70
+#: .\pyvision_production\sae\sae\index\views.py:70 .\sae\index\views.py:130
 msgid ""
 "By collecting these information, we can do a better job in systems "
 "administration, abuse prevention, and in user trends understanding."
 msgstr "收集您的信息有助于我们进行系统管理、防止滥用、用户行为分析。"
 
-#: .\index\views.py:71
+#: .\pyvision_production\sae\sae\index\views.py:71 .\sae\index\views.py:131
 msgid ""
 "This Privacy Policy may change from time to time. Any such changes will be "
 "posted on this page. The effective date of this policy is October 22, 2018."
 msgstr "本隐私声明会不断更新并显示在本页面。本次更新生效日期是2018年10月22日。"
 
-#: .\index\views.py:108
+#: .\pyvision_production\sae\sae\index\views.py:108 .\sae\index\views.py:168
 msgid "welcome"
 msgstr "欢迎"
 
-#: .\register\forms.py:12 .\template\register_login.html:16
-#: .\template\register_register.html:17 .\template\sae01_show_db.html:15
-#: .\template\sae01_show_db.html:19
+#: .\pyvision_production\sae\sae\register\forms.py:12
+#: .\pyvision_production\sae\sae\template\register_login.html:16
+#: .\pyvision_production\sae\sae\template\register_register.html:17
+#: .\pyvision_production\sae\sae\template\sae01_show_db.html:15
+#: .\pyvision_production\sae\sae\template\sae01_show_db.html:19
+#: .\sae\register\forms.py:12 .\sae\template\register_login.html:16
+#: .\sae\template\register_register.html:17
+#: .\sae\template\sae01_show_db.html:15 .\sae\template\sae01_show_db.html:19
 msgid "username"
 msgstr "用户名"
 
-#: .\register\forms.py:13
+#: .\pyvision_production\sae\sae\register\forms.py:13
+#: .\sae\register\forms.py:13
 msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
 msgstr "必填。最多150个字符；只能是字母、数字、或者@/./+/-/_"
 
-#: .\register\forms.py:16 .\template\register_login.html:20
-#: .\template\register_register.html:21
+#: .\pyvision_production\sae\sae\register\forms.py:16
+#: .\pyvision_production\sae\sae\template\register_login.html:20
+#: .\pyvision_production\sae\sae\template\register_register.html:21
+#: .\sae\register\forms.py:16 .\sae\template\register_login.html:20
+#: .\sae\template\register_register.html:21
 msgid "password"
 msgstr "密码"
 
-#: .\register\forms.py:16
+#: .\pyvision_production\sae\sae\register\forms.py:16
+#: .\sae\register\forms.py:16
 msgid "input your password"
 msgstr "请输入密码"
 
-#: .\register\forms.py:25 .\template\register_register.html:33
+#: .\pyvision_production\sae\sae\register\forms.py:25
+#: .\pyvision_production\sae\sae\template\register_register.html:33
+#: .\sae\register\forms.py:25 .\sae\template\register_register.html:33
 msgid "mobile"
 msgstr "手机号码"
 
-#: .\register\forms.py:26
+#: .\pyvision_production\sae\sae\register\forms.py:26
+#: .\sae\register\forms.py:26
 msgid "input your mobile number"
 msgstr "请输入手机号码"
 
-#: .\register\views.py:30 .\register\views.py:46
-#: .\template\register_login.html:49
+#: .\pyvision_production\sae\sae\register\views.py:30
+#: .\pyvision_production\sae\sae\register\views.py:46
+#: .\pyvision_production\sae\sae\template\register_login.html:49
+#: .\sae\register\views.py:30 .\sae\register\views.py:46
+#: .\sae\template\register_login.html:49
 msgid "login"
 msgstr "登录"
 
-#: .\register\views.py:61 .\register\views.py:70
-#: .\template\register_login.html:50 .\template\register_register.html:53
+#: .\pyvision_production\sae\sae\register\views.py:61
+#: .\pyvision_production\sae\sae\register\views.py:70
+#: .\pyvision_production\sae\sae\template\register_login.html:50
+#: .\pyvision_production\sae\sae\template\register_register.html:53
+#: .\sae\register\views.py:61 .\sae\register\views.py:70
+#: .\sae\template\register_login.html:50
+#: .\sae\template\register_register.html:53
 msgid "register"
 msgstr "注册"
 
-#: .\register\views.py:96
+#: .\pyvision_production\sae\sae\register\views.py:96
+#: .\sae\register\views.py:96
 msgid "Welcome to Image Pocket"
 msgstr "欢迎注册图片口袋"
 
-#: .\register\views.py:97
+#: .\pyvision_production\sae\sae\register\views.py:97
+#: .\sae\register\views.py:97
 msgid ""
 "Hello there. We are looking forward to serving you via this little piece of "
 "app. We hope you have a great experience in using it. You should recall your "
@@ -365,133 +418,185 @@ msgstr ""
 "您好！我们期待通过本app给您提供良好印象的服务。您可以通过本app回忆您的美好时"
 "光"
 
-#: .\template\400.html:7 .\template\403.html:7 .\template\404.html:7
-#: .\template\500.html:7 .\template\base.html:12 .\template\basic_daily.html:10
-#: .\template\basic_minute.html:10 .\template\error_base.html:12
-#: .\template\home_aboutus.html:7 .\template\home_base.html:6
-#: .\template\home_base_back_arrow.html:7 .\template\home_detail.html:12
-#: .\template\home_message.html:14 .\template\home_messages.html:9
-#: .\template\register_login.html:9 .\template\register_register.html:10
+#: .\pyvision_production\sae\sae\template\400.html:7
+#: .\pyvision_production\sae\sae\template\403.html:7
+#: .\pyvision_production\sae\sae\template\404.html:7
+#: .\pyvision_production\sae\sae\template\500.html:7
+#: .\pyvision_production\sae\sae\template\base.html:12
+#: .\pyvision_production\sae\sae\template\basic_daily.html:10
+#: .\pyvision_production\sae\sae\template\basic_minute.html:10
+#: .\pyvision_production\sae\sae\template\error_base.html:12
+#: .\pyvision_production\sae\sae\template\home_aboutus.html:7
+#: .\pyvision_production\sae\sae\template\home_base.html:6
+#: .\pyvision_production\sae\sae\template\home_base_back_arrow.html:7
+#: .\pyvision_production\sae\sae\template\home_detail.html:12
+#: .\pyvision_production\sae\sae\template\home_message.html:14
+#: .\pyvision_production\sae\sae\template\home_messages.html:9
+#: .\pyvision_production\sae\sae\template\register_login.html:9
+#: .\pyvision_production\sae\sae\template\register_register.html:10
+#: .\sae\template\400.html:7 .\sae\template\403.html:7
+#: .\sae\template\404.html:7 .\sae\template\500.html:7
+#: .\sae\template\base.html:12 .\sae\template\basic_daily.html:10
+#: .\sae\template\basic_minute.html:10 .\sae\template\error_base.html:12
+#: .\sae\template\home_aboutus.html:7 .\sae\template\home_base.html:6
+#: .\sae\template\home_base_back_arrow.html:7
+#: .\sae\template\home_detail.html:12 .\sae\template\home_message.html:14
+#: .\sae\template\home_messages.html:9 .\sae\template\index_instruction.html:7
+#: .\sae\template\index_objects.html:8 .\sae\template\register_login.html:9
+#: .\sae\template\register_register.html:10
 msgid "photo pocket"
 msgstr "图片口袋"
 
-#: .\template\400.html:10
+#: .\pyvision_production\sae\sae\template\400.html:10
+#: .\sae\template\400.html:10
 msgid "400 Bad Request: Sorry we cannot process this request."
 msgstr "400 Bad Request: 对不起，服务器无法处理该请求。"
 
-#: .\template\403.html:10
+#: .\pyvision_production\sae\sae\template\403.html:10
+#: .\sae\template\403.html:10
 msgid "403: Sorry visiting to this page needs authentication."
 msgstr "403: 对不起，访问该页面需要相应权限。"
 
-#: .\template\404.html:10
+#: .\pyvision_production\sae\sae\template\404.html:10
+#: .\sae\template\404.html:10
 msgid "404: Sorry we cannot find this page."
 msgstr "404: 对不起，该页面不存在。"
 
-#: .\template\500.html:10
+#: .\pyvision_production\sae\sae\template\500.html:10
+#: .\sae\template\500.html:10
 msgid "server busy. please visit later"
 msgstr "服务器繁忙；请稍后再试。"
 
-#: .\template\base.html:40 .\template\error_base.html:40
+#: .\pyvision_production\sae\sae\template\base.html:40
+#: .\pyvision_production\sae\sae\template\error_base.html:40
+#: .\sae\template\base.html:40 .\sae\template\error_base.html:40
 msgid "press again for quitting the app"
 msgstr "再按一次退出应用"
 
-#: .\template\error_base.html:12
+#: .\pyvision_production\sae\sae\template\error_base.html:12
+#: .\sae\template\error_base.html:12
 msgid "errors"
 msgstr "出错啦"
 
-#: .\template\home_detail.html:26
-msgid "recognition catagories"
-msgstr "识别到的类别"
-
-#: .\template\home_detail.html:27
-msgid "time consumed"
-msgstr "包括等待的总耗时"
-
-#: .\template\home_index.html:9
+#: .\pyvision_production\sae\sae\template\home_index.html:9
+#: .\sae\template\home_index.html:9
 #, python-format
 msgid "Images uploaded by %(user_name)s:"
 msgstr "%(user_name)s上传过的图片："
 
-#: .\template\home_index.html:28 .\template\home_messages.html:45
-#: .\template\index_index.html:27
+#: .\pyvision_production\sae\sae\template\home_index.html:28
+#: .\pyvision_production\sae\sae\template\home_messages.html:45
+#: .\pyvision_production\sae\sae\template\index_index.html:27
+#: .\sae\template\home_index.html:28 .\sae\template\home_messages.html:45
+#: .\sae\template\index_index.html:27 .\sae\template\index_objects.html:24
 msgid "previous"
 msgstr "前一页"
 
-#: .\template\home_index.html:36 .\template\home_messages.html:53
-#: .\template\index_index.html:35
+#: .\pyvision_production\sae\sae\template\home_index.html:36
+#: .\pyvision_production\sae\sae\template\home_messages.html:53
+#: .\pyvision_production\sae\sae\template\index_index.html:35
+#: .\sae\template\home_index.html:36 .\sae\template\home_messages.html:53
+#: .\sae\template\index_index.html:35 .\sae\template\index_objects.html:32
 msgid "next"
 msgstr "下一页"
 
-#: .\template\home_message.html:23
+#: .\pyvision_production\sae\sae\template\home_message.html:23
+#: .\sae\template\home_message.html:23
 msgid "From"
 msgstr "来自"
 
-#: .\template\home_messages.html:30
+#: .\pyvision_production\sae\sae\template\home_messages.html:30
+#: .\sae\template\home_messages.html:30
 msgid "ago"
 msgstr "之前"
 
-#: .\template\home_settings.html:17
+#: .\pyvision_production\sae\sae\template\home_settings.html:17
+#: .\sae\template\home_settings.html:17
 msgid "privacy"
 msgstr "隐私"
 
-#: .\template\home_settings.html:36
+#: .\pyvision_production\sae\sae\template\home_settings.html:36
+#: .\sae\template\home_settings.html:36
 msgid "logout"
 msgstr "登出"
 
-#: .\template\home_tabs.html:20
+#: .\pyvision_production\sae\sae\template\home_tabs.html:20
+#: .\sae\template\home_tabs.html:20
 msgid "upload"
 msgstr "上传"
 
-#: .\template\home_upload.html:18
+#: .\pyvision_production\sae\sae\template\home_upload.html:18
+#: .\sae\template\home_upload.html:18
 msgid "Please input a note upto 1023 bytes"
 msgstr "请输入小于1023字节的文本"
 
-#: .\template\home_upload.html:26
+#: .\pyvision_production\sae\sae\template\home_upload.html:26
+#: .\sae\template\home_upload.html:26
 #, python-format
 msgid "Select an image upto %(size)s"
 msgstr "选图片（小于%(size)s）"
 
-#: .\template\home_upload.html:33
+#: .\pyvision_production\sae\sae\template\home_upload.html:33
+#: .\sae\template\home_upload.html:33
 msgid "Upload"
 msgstr "上传"
 
-#: .\template\home_upload.html:34
+#: .\pyvision_production\sae\sae\template\home_upload.html:34
+#: .\sae\template\home_upload.html:34
 msgid "Cancel"
 msgstr "取消"
 
-#: .\template\home_upload.html:39 .\template\register_login.html:27
-#: .\template\register_register.html:38
+#: .\pyvision_production\sae\sae\template\home_upload.html:39
+#: .\pyvision_production\sae\sae\template\register_login.html:27
+#: .\pyvision_production\sae\sae\template\register_register.html:38
+#: .\sae\template\home_upload.html:39 .\sae\template\register_login.html:27
+#: .\sae\template\register_register.html:38
 msgid "Please correct the error below."
 msgstr "请更正下面错误"
 
-#: .\template\home_upload.html:39 .\template\register_login.html:27
-#: .\template\register_register.html:38
+#: .\pyvision_production\sae\sae\template\home_upload.html:39
+#: .\pyvision_production\sae\sae\template\register_login.html:27
+#: .\pyvision_production\sae\sae\template\register_register.html:38
+#: .\sae\template\home_upload.html:39 .\sae\template\register_login.html:27
+#: .\sae\template\register_register.html:38
 msgid "Please correct the errors below."
 msgstr "请更正下面错误"
 
-#: .\template\index_index.html:8
+#: .\pyvision_production\sae\sae\template\index_index.html:8
+#: .\sae\template\index_index.html:8
 msgid "demo images by admin "
 msgstr "示例图片，管理员："
 
-#: .\template\index_index.html:42
+#: .\pyvision_production\sae\sae\template\index_index.html:42
+#: .\sae\template\index_index.html:45
 msgid "Home"
 msgstr "首页"
 
-#: .\template\index_index.html:44
+#: .\pyvision_production\sae\sae\template\index_index.html:44
+#: .\sae\template\index_index.html:47
 msgid "Login"
 msgstr "登录"
 
-#: .\template\register_login.html:17 .\template\register_login.html:85
-#: .\template\register_register.html:18 .\template\register_register.html:89
+#: .\pyvision_production\sae\sae\template\register_login.html:17
+#: .\pyvision_production\sae\sae\template\register_login.html:85
+#: .\pyvision_production\sae\sae\template\register_register.html:18
+#: .\pyvision_production\sae\sae\template\register_register.html:89
+#: .\sae\template\register_login.html:17 .\sae\template\register_login.html:85
+#: .\sae\template\register_register.html:18
+#: .\sae\template\register_register.html:89
 msgid "Please input your username"
 msgstr "请输入您的用户名"
 
-#: .\template\register_login.html:21 .\template\register_login.html:81
-#: .\template\register_register.html:22
+#: .\pyvision_production\sae\sae\template\register_login.html:21
+#: .\pyvision_production\sae\sae\template\register_login.html:81
+#: .\pyvision_production\sae\sae\template\register_register.html:22
+#: .\sae\template\register_login.html:21 .\sae\template\register_login.html:81
+#: .\sae\template\register_register.html:22
 msgid "Please input your password"
 msgstr "请输入您的密码"
 
-#: .\template\register_login.html:40
+#: .\pyvision_production\sae\sae\template\register_login.html:40
+#: .\sae\template\register_login.html:40
 #, python-format
 msgid ""
 "You are authenticated as %(username)s, but are not authorized to access this "
@@ -500,50 +605,158 @@ msgstr ""
 "您正在以 %(username)s 登录。该用户权限不能访问本页面。您是否需要用另外一个账"
 "号登录？"
 
-#: .\template\register_register.html:25
+#: .\pyvision_production\sae\sae\template\register_register.html:25
+#: .\sae\template\register_register.html:25
 msgid "retype pwd"
 msgstr "确认密码"
 
-#: .\template\register_register.html:26 .\template\register_register.html:72
+#: .\pyvision_production\sae\sae\template\register_register.html:26
+#: .\pyvision_production\sae\sae\template\register_register.html:72
+#: .\sae\template\register_register.html:26
+#: .\sae\template\register_register.html:72
 msgid "Please retype your password"
 msgstr "请再次输入您的密码"
 
-#: .\template\register_register.html:29
+#: .\pyvision_production\sae\sae\template\register_register.html:29
+#: .\sae\template\register_register.html:29
 msgid "email"
 msgstr "邮箱"
 
-#: .\template\register_register.html:30 .\template\register_register.html:93
+#: .\pyvision_production\sae\sae\template\register_register.html:30
+#: .\pyvision_production\sae\sae\template\register_register.html:93
+#: .\sae\template\register_register.html:30
+#: .\sae\template\register_register.html:93
 msgid "Please input your email address"
 msgstr "请输入您的邮箱地址"
 
-#: .\template\register_register.html:34
+#: .\pyvision_production\sae\sae\template\register_register.html:34
+#: .\sae\template\register_register.html:34
 msgid "Please input your mobile"
 msgstr "请输入您的手机号码"
 
-#: .\template\register_register.html:56
+#: .\pyvision_production\sae\sae\template\register_register.html:56
+#: .\sae\template\register_register.html:56
 msgid "I have read and agreed to the "
 msgstr "我已经阅读并且同意如下"
 
-#: .\template\register_register.html:60
+#: .\pyvision_production\sae\sae\template\register_register.html:60
+#: .\sae\template\register_register.html:60
 msgid "terms of use"
 msgstr "使用条款"
 
-#: .\template\register_register.html:60
+#: .\pyvision_production\sae\sae\template\register_register.html:60
+#: .\sae\template\register_register.html:60
 msgid "and"
 msgstr "和"
 
-#: .\template\register_register.html:76
+#: .\pyvision_production\sae\sae\template\register_register.html:76
+#: .\sae\template\register_register.html:76
 msgid "unmatched passwords"
 msgstr "密码错误"
 
-#: .\template\register_register.html:97
+#: .\pyvision_production\sae\sae\template\register_register.html:97
+#: .\sae\template\register_register.html:97
 msgid "Please agree to the terms of use"
 msgstr "请同意使用条款"
 
-#: .\template\sae01_cipher.html:8 .\template\sae01_create.html:9
-#: .\template\sae01_show_db.html:9 .\template\sae01_test.html:9
+#: .\pyvision_production\sae\sae\template\sae01_cipher.html:8
+#: .\pyvision_production\sae\sae\template\sae01_create.html:9
+#: .\pyvision_production\sae\sae\template\sae01_show_db.html:9
+#: .\pyvision_production\sae\sae\template\sae01_test.html:9
+#: .\sae\template\sae01_cipher.html:8 .\sae\template\sae01_create.html:9
+#: .\sae\template\sae01_show_db.html:9 .\sae\template\sae01_test.html:9
 msgid "debug page"
 msgstr "调试页面"
+
+#: .\sae\basic\templatetags\basic_extras.py:108
+msgid "day(s)"
+msgstr "天"
+
+#: .\sae\index\views.py:31
+msgid "objects"
+msgstr "物体"
+
+#: .\sae\index\views.py:70 .\sae\template\index_index.html:41
+msgid "Instructions"
+msgstr "使用说明"
+
+#: .\sae\template\home_detail.html:26
+msgid "recognition catagories"
+msgstr "识别到的类别"
+
+#: .\sae\template\home_detail.html:27
+msgid "time consumed"
+msgstr "包括等待的总耗时"
+
+#: .\sae\template\index_instruction.html:11
+msgid ""
+"\n"
+"\t\tCurrently a Caffe trained model is deployed on the server. This model "
+"could only recognize 1000 objects, i.e. any images uploaded will be "
+"catagorized to one of these 1000 objects. Please click the link below to "
+"check out these 1000 objects.<br /><br />\n"
+"\t\tWe checked this model by uploading 80 images, with 58 recognied "
+"correctly and 22 went south. These 22 are listed below:<br />\n"
+"\t\tImage #183: reported police wagon on ambulance<br />\n"
+"\t\tImage #179: reported whistle on trashcan cartoon<br />\n"
+"\t\tImage #176: reported triceratops on 3 sharks<br />\n"
+"\t\tImage #174: reported sunglasses on shark cartoon<br />\n"
+"\t\tImage #169: reported hyena on hippopotamus's face<br />\n"
+"\t\tImage #168: reported macaque on gorilla<br />\n"
+"\t\tImage #161: reported leopard on tiger<br />\n"
+"\t\tImage #159: reported bell pepper on a cut strawberry<br />\n"
+"\t\tImage #157: reported Indian cobra on python<br />\n"
+"\t\tImage #146: reported wild boar on peacock<br />\n"
+"\t\tImage #144: reported hyena on owl<br />\n"
+"\t\tImage #140: reported sweet potato on ladybug<br />\n"
+"\t\tImage #137: reported Arabian camel on horse<br />\n"
+"\t\tImage #134: reported hen on goose<br />\n"
+"\t\tImage #128: reported jerryfish on fish<br />\n"
+"\t\tImage #124: reported meerkat on dog<br />\n"
+"\t\tImage #118: reported hen on cock<br />\n"
+"\t\tImage #115: reported white wolf on cat<br />\n"
+"\t\tImage #113: reported prairie wolf on cat<br />\n"
+"\t\tImage #111: reported bagel on cake<br />\n"
+"\t\tImage #109: reported necklace on butterfly<br />\n"
+"\t\tImage #101: reported sweet potato on peeled pineapple<br /><br />\n"
+"\t\tOur server has very limit hardware settings and anybody needs to "
+"register an account for uploading images for recognition.\n"
+"\t"
+msgstr ""
+"\n"
+"本app当前使用的一个已训练模型仅能够分类1000种物体。上传这1000种物体之外的图片会被分类到这1000种物体中的一种。请点击下面链接查看这1000种物体的具体名称。<br /><br />"
+"我们上传了80张图片进行测试，其中58张被正确识别。模型错误地分类了下面22张图片：<br />"
+"183号图片：将救护车当做警车<br />"
+"179号图片：将垃圾桶卡通图片当做口哨<br />"
+"176号图片：将3条不在海底的鲨鱼当做三角恐龙<br />"
+"174号图片：将鲨鱼卡通相片当做太阳镜<br />"
+"169号图片：将河马的正面头像当做鬣狗<br />"
+"168号图片：将大猩猩当做猕猴<br />"
+"161号图片：将老虎当做豹子<br />"
+"159号图片：将切开的草莓当做甜椒<br />"
+"157号图片：将蟒蛇当做印度眼镜蛇<br />"
+"146号图片：将孔雀屁股当做豪猪<br />"
+"144号图片：将猫头鹰当做草原鸡<br />"
+"140号图片：将七星瓢虫当做甘薯<br />"
+"137号图片：将马当做单峰骆驼<br />"
+"134号图片：将鹅当做母鸡<br />"
+"128号图片：将小丑鱼当做海蜇<br />"
+"124号图片：将狗当做猫鼬<br />"
+"118号图片：将公鸡当做母鸡<br />"
+"115号图片：将猫当做白狼<br />"
+"113号图片：将猫当做草原狼<br />"
+"111号图片：将蛋糕当做百吉饼<br />"
+"109号图片：将蝴蝶当做项链<br />"
+"101号图片：将削了皮的菠萝当做甘薯<br /><br />"
+"本app服务器配置相当较低。需要上传图片来识别图像中物体的客户请先注册。"
+
+#: .\sae\template\index_instruction.html:42
+msgid "object list the trained model understood"
+msgstr "已训练模型所能够识别的物体"
+
+#: .\sae\template\index_objects.html:12
+msgid "objects understood by the trained model"
+msgstr "能够被已训练模型所识别的物体"
 
 #~ msgid "404"
 #~ msgstr "404"

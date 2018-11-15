@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load i18n static %}
+{% load basic_extras %}
+
+{% block content %}
+<header class="mui-bar mui-bar-nav">
+	<a class="mui-icon mui-icon-left-nav mui-pull-left" href="{% url 'instruction' %}" ></a>
+	<h1 class="mui-title">{{page_title}} | {% trans "photo pocket" %}</h1>
+</header>
+<div class="mui-content">
+	<div class="title">
+		{% trans "objects understood by the trained model" %}
+	</div>
+	<div class="mui-card" style="margin-bottom: 35px;">
+		<ul class="mui-table-view">
+			{% for one_record in objects %}
+			<li class="mui-table-view-cell">{{one_record.word_id}} : {{ one_record.label|getRecognizedString }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<ul class="mui-pager">
+		{% if objects.has_previous %}
+			<li><a href="?page=1">&laquo; 1</a></li>
+			<li><a href="?page={{ objects.previous_page_number }}">{% trans "previous" %}</a></li>
+		{% endif %}
+		{% if 1 < objects.paginator.num_pages %}
+		<span class="current">
+			<li>{{ objects.number }}</li>
+		</span>
+		{% endif %}
+		{% if objects.has_next %}
+			<li><a href="?page={{ objects.next_page_number }}">{% trans "next" %}</a></li>
+			<li><a href="?page={{ objects.paginator.num_pages }}">{{ objects.paginator.num_pages }} &raquo;</a></li>
+		{% endif %}
+	</ul>
+</div>
+{% endblock %}

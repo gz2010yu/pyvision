@@ -38,6 +38,9 @@
 	</ul>
 	<ul class="mui-table-view" style="margin-top: 20px;">
 		<li class="mui-table-view-cell" style="text-align: center;">
+			<a href="{% url 'instruction' %}">{% trans "Instructions" %}</a>
+		</li>
+		<li class="mui-table-view-cell" style="text-align: center;">
 			{% if logined %}
 			<a href="{% url 'home-index' %}">{% trans "Home" %}</a>
 			{% else %}

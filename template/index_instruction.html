@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block content %}
+<header class="mui-bar mui-bar-nav">
+	<a class="mui-icon mui-icon-left-nav mui-pull-left" href="{% url 'index' %}" ></a>
+	<h1 class="mui-title">{{page_title}} | {% trans "photo pocket" %}</h1>
+</header>
+<div style="margin-top: 75px;"></div>
+<div class="title">
+	{% blocktrans %}
+		Currently a Caffe trained model is deployed on the server. This model could only recognize 1000 objects, i.e. any images uploaded will be catagorized to one of these 1000 objects. Please click the link below to check out these 1000 objects.<br /><br />
+		We checked this model by uploading 80 images, with 58 recognied correctly and 22 went south. These 22 are listed below:<br />
+		Image #183: reported police wagon on ambulance<br />
+		Image #179: reported whistle on trashcan cartoon<br />
+		Image #176: reported triceratops on 3 sharks<br />
+		Image #174: reported sunglasses on shark cartoon<br />
+		Image #169: reported hyena on hippopotamus's face<br />
+		Image #168: reported macaque on gorilla<br />
+		Image #161: reported leopard on tiger<br />
+		Image #159: reported bell pepper on a cut strawberry<br />
+		Image #157: reported Indian cobra on python<br />
+		Image #146: reported wild boar on peacock<br />
+		Image #144: reported hyena on owl<br />
+		Image #140: reported sweet potato on ladybug<br />
+		Image #137: reported Arabian camel on horse<br />
+		Image #134: reported hen on goose<br />
+		Image #128: reported jerryfish on fish<br />
+		Image #124: reported meerkat on dog<br />
+		Image #118: reported hen on cock<br />
+		Image #115: reported white wolf on cat<br />
+		Image #113: reported prairie wolf on cat<br />
+		Image #111: reported bagel on cake<br />
+		Image #109: reported necklace on butterfly<br />
+		Image #101: reported sweet potato on peeled pineapple<br /><br />
+		Our server has very limit hardware settings and anybody needs to register an account for uploading images for recognition.
+	{% endblocktrans %}
+</div>
+
+<div class="mui-content-padded">
+	<div class="link-area" align="center">
+		<a href="{% url 'model-objects' %}" >{% trans "object list the trained model understood" %}</a>
+	</div>
+</div>
+{% endblock %}

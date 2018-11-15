@@ -23,7 +23,7 @@ from django.conf.urls.static import static
 # from sae.sae01.views import ShowDbView, CreateView, CipherView, TestView
 from sae.home.views import HomeView, ImageDetailView, UploadView, MessageListView, MessageDetailView, SettingsView
 from sae.register.views import UserLoginView, UserLogoutView, RegisterView, ForgetPasswordView
-from sae.index.views import IndexView, TermsView, PrivacyView, AboutUsView
+from sae.index.views import IndexView, TermsView, PrivacyView, AboutUsView, ObjectListView, InstructionView
 from sae.basic.views import MinuteCrontabView, DailyCrontabView
 
 login_patterns = [
@@ -68,5 +68,7 @@ urlpatterns = [
 	re_path(r'^privacy/', PrivacyView.as_view(), {'goto': 2}, name='user-privacy' ),
 	re_path(r'^image/(?P<image_id>\d+)/page/(?P<pagenum>\d+)/', ImageDetailView.as_view(), {'goto': 2}, name='one-admin-image' ),
 	re_path(r'^crontab/', include(crontab_patterns) ),
+	re_path(r'^instruction/', InstructionView.as_view(), name='instruction' ),
+	re_path(r'^objects/', ObjectListView.as_view(), name='model-objects' ),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
