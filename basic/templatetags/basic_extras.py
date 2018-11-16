@@ -97,8 +97,12 @@ def getTimeSpan(value, arg):
 	string2 = arg.strftime("%Y-%m-%d %H:%M:%S")
 	if string1 == string2:
 		return '--'
-	delta = arg - value - timedelta(seconds=28800)
-	# there is a bug here. The Django uses UTC while MySQL SYSDATE() uses local time, 8 * 3600 = 28800
+	# 20181117 update to a new daemon without writing database. after this update, no UTC / local time difference. Therefore
+	# add this 'if'
+	delta = arg - value
+	if delta > timedelta(seconds=28800):
+		delta -= timedelta(seconds=28800)
+		# there is a bug here. The Django uses UTC while MySQL SYSDATE() uses local time, 8 * 3600 = 28800
 	seconds = delta.seconds
 	hours = math.floor( seconds / 3600 )
 	minutes = math.floor( (seconds - 3600 * hours) / 60 )

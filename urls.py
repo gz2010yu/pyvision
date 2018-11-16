@@ -48,8 +48,7 @@ home_patterns = [
 ]
 
 crontab_patterns = [
-	re_path(r'^goal/(?P<goal>\d+)/result/(?P<result>\d+)/filename/(?P<filename>(\w|\.)+)/token/(?P<token>\w+)', MinuteCrontabView.as_view(), name='crontab-minute' ),
-	re_path(r'^goal/(?P<goal>\d+)/token/(?P<token>\w+)', MinuteCrontabView.as_view(), name='crontab-minute' ),
+	re_path(r'^result/(?P<result>\d+)/filename/(?P<filename>(\w|\.)+)/token/(?P<token>\w+)', MinuteCrontabView.as_view(), name='crontab-minute' ),
 	re_path(r'^daily/', DailyCrontabView.as_view(), name='crontab-daily' ),
 ]
 
